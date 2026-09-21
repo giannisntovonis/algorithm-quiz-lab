@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz | Algorithm & Quiz Lab</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Algorithm & Quiz Lab</a>
+      <nav>
+        <a class="active" href="quiz.html">Quiz</a>
+        <a href="visualizer.html">Visualizer</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page-space">
+    <section class="card quiz-card">
+      <div id="start-screen">
+        <p class="eyebrow">Πληροφορική • Quiz</p>
+        <h1>Quiz βασικών εννοιών</h1>
+        <p>6 ερωτήσεις με άμεση ανατροφοδότηση.</p>
+        <button id="start-btn">Έναρξη Quiz</button>
+      </div>
+
+      <div id="quiz-screen" class="hidden">
+        <div class="quiz-header">
+          <span id="progress"></span>
+          <span id="score"></span>
+        </div>
+        <h2 id="question"></h2>
+        <div id="answers" class="answers"></div>
+        <div id="feedback" class="feedback hidden"></div>
+        <button id="next-btn" class="hidden">Επόμενη ερώτηση</button>
+      </div>
+
+      <div id="result-screen" class="hidden">
+        <h2>Το quiz τελείωσε!</h2>
+        <p id="final-score" class="final-score"></p>
+        <p id="final-message"></p>
+        <button id="restart-btn">Ξανά</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="questions.js"></script>
+  <script src="quiz.js"></script>
+
+  <footer class="site-footer"><div class="container footer-inner"><span>Algorithm & Quiz Lab</span><span>Version 1.0</span></div></footer>
+</body>
+</html>
