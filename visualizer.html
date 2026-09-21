@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Algorithm Visualizer | Algorithm & Quiz Lab</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Algorithm & Quiz Lab</a>
+      <nav>
+        <a href="quiz.html">Quiz</a>
+        <a class="active" href="visualizer.html">Visualizer</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page-space">
+    <section class="card">
+      <p class="eyebrow">Algorithm Visualizer • Version 5</p>
+      <h1>Πρόβλεψε, εκτέλεσε, εξήγησε</h1>
+      <p class="lead compact">
+        Ο μαθητής δεν παρακολουθεί απλώς: πριν από κρίσιμα βήματα καλείται να προβλέψει τι θα συμβεί.
+      </p>
+
+      <div class="form-grid">
+        <div>
+          <label for="algorithm">Αλγόριθμος</label>
+          <select id="algorithm">
+            <option value="bubble">Bubble Sort</option>
+            <option value="selection">Selection Sort</option>
+            <option value="binary">Binary Search</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="numbers">Αριθμοί</label>
+          <input id="numbers" value="8, 3, 6, 2, 5, 9, 4">
+          <small>2–12 αριθμοί, χωρισμένοι με κόμμα.</small>
+        </div>
+
+        <div id="target-wrap" class="hidden">
+          <label for="target">Αριθμός αναζήτησης</label>
+          <input id="target" type="number" value="6">
+        </div>
+      </div>
+
+      <div class="mode-row">
+        <label class="switch-row">
+          <input id="predict-mode" type="checkbox" checked>
+          <span><strong>Predict Mode</strong><small>Σταματά πριν από κρίσιμα βήματα και ζητά πρόβλεψη.</small></span>
+        </label>
+      </div>
+
+      <div class="controls">
+        <button id="load-btn">Φόρτωση</button>
+        <button id="random-btn" class="secondary-dark">Τυχαίοι αριθμοί</button>
+        <button id="step-btn">Επόμενο βήμα</button>
+        <button id="auto-btn">Αυτόματη εκτέλεση</button>
+        <button id="reset-btn" class="secondary-dark">Επαναφορά</button>
+      </div>
+
+      <div id="prediction-card" class="prediction-card hidden">
+        <span class="eyebrow">Predict Next Step</span>
+        <h2 id="prediction-question"></h2>
+        <div id="prediction-options" class="prediction-options"></div>
+        <div id="prediction-feedback" class="prediction-feedback hidden"></div>
+      </div>
+
+      <div class="workspace">
+        <div>
+          <div id="array-container" class="array-container"></div>
+
+          <div class="status-box">
+            <strong>Τι συμβαίνει τώρα:</strong>
+            <p id="status"></p>
+          </div>
+
+          <div class="variables-box">
+            <h2>Μεταβλητές</h2>
+            <div id="variables" class="variables-grid"></div>
+          </div>
+        </div>
+
+        <aside class="code-panel">
+          <span class="eyebrow">Ψευδοκώδικας</span>
+          <h2 id="algo-title"></h2>
+          <p id="algo-description" class="algo-description"></p>
+          <pre id="pseudocode" class="pseudocode"></pre>
+        </aside>
+      </div>
+
+      <section class="trace-section">
+        <div class="trace-header">
+          <div>
+            <span class="eyebrow">Trace Table</span>
+            <h2>Πίνακας ιχνηλάτησης</h2>
+          </div>
+          <button id="clear-trace-btn" class="secondary-dark">Καθαρισμός</button>
+        </div>
+
+        <div class="trace-table-wrap">
+          <table class="trace-table">
+            <thead id="trace-head"></thead>
+            <tbody id="trace-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="visualizer.js"></script>
+</body>
+</html>
