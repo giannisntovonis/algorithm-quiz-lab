@@ -24,6 +24,15 @@
         <p class="eyebrow">Πληροφορική • Quiz</p>
         <h1>Quiz βασικών εννοιών</h1>
         <p>6 ερωτήσεις με άμεση ανατροφοδότηση.</p>
+
+        <div class="student-code-box">
+          <label for="student-code">Κωδικός μαθητή</label>
+          <input id="student-code" type="text" maxlength="20"
+                 autocomplete="off" placeholder="π.χ. Β1-07">
+          <small>Χρησιμοποίησε μόνο τον κωδικό που έδωσε ο εκπαιδευτικός — όχι ονοματεπώνυμο.</small>
+          <div id="student-code-error" class="form-error hidden"></div>
+        </div>
+
         <button id="start-btn">Έναρξη Quiz</button>
       </div>
 
@@ -42,14 +51,42 @@
         <h2>Το quiz τελείωσε!</h2>
         <p id="final-score" class="final-score"></p>
         <p id="final-message"></p>
+        <div id="save-status" class="save-status hidden"></div>
         <button id="restart-btn">Ξανά</button>
       </div>
     </section>
   </main>
 
+  
+  <!-- Static form blueprint: Netlify detects this during deploy. -->
+  <form name="quiz-results" method="POST" data-netlify="true"
+        netlify-honeypot="bot-field" id="quiz-results-form"
+        class="netlify-hidden-form" aria-hidden="true">
+    <input type="hidden" name="form-name" value="quiz-results">
+    <input type="text" name="bot-field">
+    <input type="hidden" name="student_code">
+    <input type="hidden" name="quiz_name">
+    <input type="hidden" name="score">
+    <input type="hidden" name="total">
+    <input type="hidden" name="percentage">
+    <input type="hidden" name="submitted_at">
+    <input type="hidden" name="answer_1">
+    <input type="hidden" name="correct_1">
+    <input type="hidden" name="answer_2">
+    <input type="hidden" name="correct_2">
+    <input type="hidden" name="answer_3">
+    <input type="hidden" name="correct_3">
+    <input type="hidden" name="answer_4">
+    <input type="hidden" name="correct_4">
+    <input type="hidden" name="answer_5">
+    <input type="hidden" name="correct_5">
+    <input type="hidden" name="answer_6">
+    <input type="hidden" name="correct_6">
+  </form>
+
   <script src="questions.js"></script>
   <script src="quiz.js"></script>
 
-  <footer class="site-footer"><div class="container footer-inner"><span>Algorithm & Quiz Lab</span><span>Version 1.0</span></div></footer>
+  <footer class="site-footer"><div class="container footer-inner"><span>Algorithm & Quiz Lab</span><span>Version 1.1</span></div></footer>
 </body>
 </html>

@@ -1,23 +1,28 @@
-ALGORITHM & QUIZ LAB — VERSION 1.0
+ALGORITHM & QUIZ LAB — VERSION 1.1
 
-Περιλαμβάνει:
-- Quiz Πληροφορικής
-- Bubble Sort στη μορφή του σχολικού βιβλίου
-- Selection Sort
-- Binary Search
-- Οπτικοποίηση βήμα-βήμα
-- Highlighted ψευδοκώδικα
-- Ζωντανές μεταβλητές
-- Predict Next Step
-- Trace Table
-- Responsive σχεδίαση
-- Τελική αρχική σελίδα και favicon
+ΝΕΟ: ΑΠΟΘΗΚΕΥΣΗ ΑΠΟΤΕΛΕΣΜΑΤΩΝ ΜΕ NETLIFY FORMS
 
-DEPLOY ΣΤΟ NETLIFY
-Αν το project είναι συνδεδεμένο με GitHub:
-1. Αντικατάστησε τα αρχεία του repository με αυτά της έκδοσης 1.0.
-2. Κάνε commit και push.
-3. Το Netlify θα κάνει αυτόματο deploy.
+Αποθηκεύονται ανά προσπάθεια:
+- ψευδώνυμος κωδικός μαθητή
+- όνομα quiz
+- βαθμός
+- σύνολο ερωτήσεων
+- ποσοστό
+- ημερομηνία/ώρα
+- απάντηση σε κάθε ερώτηση
+- ένδειξη ΝΑΙ/ΟΧΙ αν ήταν σωστή
 
-Προτεινόμενο commit:
-Release v1.0 - final classroom version
+Δεν ζητείται ονοματεπώνυμο.
+
+ΕΝΕΡΓΟΠΟΙΗΣΗ ΣΤΟ NETLIFY
+1. Ανέβασε/κάνε push τα αρχεία της Version 1.1 στο GitHub.
+2. Στο Netlify άνοιξε το site.
+3. Πήγαινε Forms.
+4. Ενεργοποίησε Form detection, αν δεν είναι ήδη ενεργό.
+5. Κάνε νέο deploy (το push στο GitHub συνήθως το προκαλεί αυτόματα).
+6. Κάνε μία δοκιμαστική ολοκλήρωση του quiz στην ONLINE έκδοση.
+7. Netlify > Forms > quiz-results για να δεις την υποβολή.
+
+Σημείωση:
+Με άνοιγμα του index.html τοπικά από τον υπολογιστή, το quiz λειτουργεί,
+αλλά η αποθήκευση αποτελεσμάτων γίνεται μόνο όταν το site εκτελείται στο Netlify.
