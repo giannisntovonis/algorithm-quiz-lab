@@ -522,4 +522,8 @@ document.querySelector("#clear-trace-btn").onclick=()=>{
 
 target.onchange=()=>alg.value==="binary"&&original.length&&load(original);
 
+
+const requestedAlgorithm = new URLSearchParams(location.search).get("algorithm");
+if (requestedAlgorithm && ["bubble","selection","binary"].includes(requestedAlgorithm)) { alg.value=requestedAlgorithm; tw.classList.toggle("hidden",alg.value!=="binary"); }
+
 load([8,3,6,2,5,9,4]);
