@@ -557,3 +557,78 @@ body.app-shell{margin:0;min-height:100vh;background:var(--sand);color:var(--ink)
 .nav-node.level-0 + .nav-node.level-0{
   margin-top:8px;
 }
+
+
+/* ======================================================
+   VERSION 1.9 — Strict vertical chapter stacking
+   ====================================================== */
+
+/* Force the syllabus itself to be a single vertical column */
+.syllabus-nav{
+  display:block !important;
+  width:100% !important;
+}
+
+/* Every main chapter occupies its own full row */
+.syllabus-nav > .nav-node.level-0{
+  display:block !important;
+  width:100% !important;
+  max-width:none !important;
+  float:none !important;
+  clear:both !important;
+  margin:0 0 9px 0 !important;
+}
+
+/* Main chapter row always spans the sidebar */
+.syllabus-nav > .nav-node.level-0 > .nav-node-row{
+  display:flex !important;
+  width:100% !important;
+  box-sizing:border-box !important;
+}
+
+/* Chapter link uses the available width */
+.syllabus-nav > .nav-node.level-0 > .nav-node-row > .nav-link{
+  display:flex !important;
+  flex:1 1 auto !important;
+  width:auto !important;
+  min-width:0 !important;
+}
+
+/* Children open underneath, never beside the parent */
+.syllabus-nav > .nav-node.level-0 > .nav-children{
+  display:none;
+  width:100% !important;
+  box-sizing:border-box !important;
+  position:static !important;
+  float:none !important;
+  clear:both !important;
+}
+
+.syllabus-nav > .nav-node.level-0 > .nav-children.open{
+  display:block !important;
+}
+
+/* All deeper levels are also strictly vertical */
+.nav-children .nav-node{
+  display:block !important;
+  width:100% !important;
+  float:none !important;
+  clear:both !important;
+}
+
+.nav-children .nav-node-row{
+  display:flex !important;
+  width:100% !important;
+}
+
+/* Also show chapter overview on the home page vertically */
+.chapter-overview{
+  display:grid !important;
+  grid-template-columns:1fr !important;
+  gap:9px !important;
+}
+
+.chapter-pill{
+  width:100% !important;
+  box-sizing:border-box !important;
+}
