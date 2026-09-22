@@ -377,3 +377,19 @@ body.app-shell{margin:0;min-height:100vh;background:var(--sand);color:var(--ink)
 @media(max-width:800px){
   .study-grid,.process-flow,.tree-branches{grid-template-columns:1fr}
 }
+
+/* ===== Version 1.7 code samples ===== */
+.code-samples-card{margin-bottom:16px}
+.code-sample-block{margin-top:14px}
+.code-sample-block h3{margin:0 0 8px}
+.code-sample-block pre{
+  margin:0;
+  padding:16px;
+  overflow:auto;
+  border-radius:12px;
+  background:#102f34;
+  color:#eef8f6;
+  font-family:Consolas,"Courier New",monospace;
+  line-height:1.6;
+  font-size:.9rem;
+}

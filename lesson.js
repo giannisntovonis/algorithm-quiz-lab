@@ -185,6 +185,19 @@ if(!topic){
         `).join("")}
       </div>
 
+      ${content.codeSamples?.length ? `
+        <div class="study-card code-samples-card">
+          <span class="section-kicker">Ψευδοκώδικας</span>
+          <h2>Παραδείγματα κώδικα</h2>
+          ${content.codeSamples.map(x=>`
+            <div class="code-sample-block">
+              <h3>${esc(x.title)}</h3>
+              <pre>${esc(x.code)}</pre>
+            </div>
+          `).join("")}
+        </div>
+      ` : ""}
+
       ${content.process?`
         <div class="study-card process-card">
           <span class="section-kicker">Διαδικασία</span>
