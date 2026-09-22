@@ -1,6 +1,27 @@
-ALGORITHM & QUIZ LAB — VERSION 1.2
+ALGORITHM & QUIZ LAB — VERSION 1.3
 
-Νέα αρχική σελίδα με καρτέλες Μαθήματα, Quiz, Visualizers, Αποτελέσματα.
-Οι ενότητες ορίζονται στο content.js ώστε να προστίθενται εύκολα.
-Νέα αρχεία: content.js, home.js, lesson.html, lesson.js.
-Διατηρούνται Netlify Forms, Quiz, Bubble Sort βιβλίου, Selection Sort, Binary Search, Predict Mode και Trace Table.
+ΠΡΩΤΕΣ ΕΝΟΤΗΤΕΣ ΜΕ ΠΡΑΓΜΑΤΙΚΟ ΠΕΡΙΕΧΟΜΕΝΟ
+
+Γεμίστηκαν οι ενότητες:
+1. Εισαγωγή — Σύνδεση με πρότερες γνώσεις
+2. Η έννοια πρόβλημα
+3. Αλγόριθμος
+4. Ανάλυση προβλημάτων
+
+Κάθε ενότητα περιλαμβάνει:
+- εισαγωγή
+- μαθησιακούς στόχους
+- θεωρία σε μικρές ενότητες
+- παράδειγμα
+- Quick Check με άμεση ανατροφοδότηση
+
+Το περιεχόμενο βρίσκεται στο content.js, ώστε να προστίθεται εύκολα νέο υλικό.
+
+Διατηρούνται όλα τα προηγούμενα:
+- οργανωμένη αρχική σελίδα
+- Quiz
+- Netlify Forms
+- Visualizers
+- Predict Mode
+- Trace Table
+- Bubble Sort στη σχολική μορφή

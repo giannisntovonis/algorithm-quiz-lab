@@ -1,1 +1,64 @@
-<!doctype html><html lang="el"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Μάθημα | Algorithm & Quiz Lab</title><link rel="stylesheet" href="style.css"></head><body><header class="site-header"><div class="container header-inner"><a class="brand" href="index.html">Algorithm & Quiz Lab</a><nav><a href="index.html#lessons">Μαθήματα</a><a href="index.html#quiz">Quiz</a><a href="index.html#visualizers">Visualizers</a></nav></div></header><main class="container page-space"><section class="lesson-detail card"><a class="back-link" href="index.html#lessons">← Επιστροφή στις ενότητες</a><div class="lesson-detail-heading"><span id="lesson-number" class="lesson-number large"></span><div><span id="lesson-group" class="eyebrow"></span><h1 id="lesson-title"></h1></div></div><p id="lesson-intro" class="lead compact"></p><div id="lesson-actions" class="lesson-actions"></div><div class="lesson-note"><strong>Version 1.2</strong><p>Η δομή είναι έτοιμη για θεωρία, παραδείγματα, ασκήσεις και quiz ανά ενότητα.</p></div></section></main><script src="content.js"></script><script src="lesson.js"></script></body></html>
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Μάθημα | Algorithm & Quiz Lab</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">Algorithm & Quiz Lab</a>
+    <nav>
+      <a href="index.html#lessons">Μαθήματα</a>
+      <a href="index.html#quiz">Quiz</a>
+      <a href="index.html#visualizers">Visualizers</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container page-space">
+  <section class="lesson-detail card">
+    <a class="back-link" href="index.html#lessons">← Επιστροφή στις ενότητες</a>
+
+    <div class="lesson-detail-heading">
+      <span id="lesson-number" class="lesson-number large"></span>
+      <div>
+        <span id="lesson-group" class="eyebrow"></span>
+        <h1 id="lesson-title"></h1>
+      </div>
+    </div>
+
+    <p id="lesson-intro" class="lead compact"></p>
+
+    <div id="lesson-objectives" class="objectives-box hidden">
+      <h2>🎯 Στόχοι</h2>
+      <ul id="objectives-list"></ul>
+    </div>
+
+    <div class="lesson-content-tabs">
+      <button class="lesson-tab active" data-lesson-tab="theory">📘 Θεωρία</button>
+      <button class="lesson-tab" data-lesson-tab="example">💡 Παράδειγμα</button>
+      <button class="lesson-tab" data-lesson-tab="check">✅ Quick Check</button>
+    </div>
+
+    <div id="theory-panel" class="lesson-content-panel active"></div>
+    <div id="example-panel" class="lesson-content-panel"></div>
+    <div id="check-panel" class="lesson-content-panel"></div>
+
+    <div id="lesson-actions" class="lesson-actions"></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>Algorithm & Quiz Lab</span>
+    <span>Version 1.3</span>
+  </div>
+</footer>
+
+<script src="content.js"></script>
+<script src="lesson.js"></script>
+</body>
+</html>
