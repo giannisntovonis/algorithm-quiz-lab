@@ -1,1 +1,83 @@
-<!doctype html><html lang="el"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ενότητα | Algorithm & Quiz Lab</title><link rel="stylesheet" href="style.css"></head><body class="app-shell"><header class="app-topbar"><button id="sidebar-toggle" class="mobile-menu-button">☰</button><a class="app-brand" href="index.html"><span class="brand-symbol">A</span><span><strong>Algorithm & Quiz Lab</strong><small>Πληροφορική</small></span></a><nav class="top-actions"><a href="quiz.html">Quiz</a><a href="visualizer.html">Visualizers</a><a href="results.html">Αποτελέσματα</a></nav></header><aside class="app-sidebar"><div class="sidebar-head"><span class="sidebar-label">Εξεταστέα ύλη</span><input id="syllabus-search" type="search" placeholder="Αναζήτηση ενότητας…"></div><nav id="syllabus-nav" class="syllabus-nav"></nav></aside><main class="app-main lesson-main"><div class="breadcrumb"><a href="index.html">Αρχική</a><span>›</span><span id="breadcrumb-current"></span></div><section class="lesson-hero-new"><span id="topic-code" class="topic-code"></span><div><span id="topic-parent" class="section-kicker"></span><h1 id="topic-title"></h1><p id="topic-intro"></p></div></section><section id="topic-children-section" class="subtopics-panel hidden"><div class="panel-heading"><span class="section-kicker">Υποενότητες</span><h2>Περιεχόμενα</h2></div><div id="topic-children" class="subtopics-grid"></div></section><section id="content-section" class="content-layout hidden"><div id="objectives-card" class="learning-card"></div><div id="theory-card" class="learning-card"></div><div id="example-card" class="learning-card"></div></section><section id="placeholder-section" class="placeholder-panel hidden"><span class="placeholder-icon">✦</span><h2>Η δομή της ενότητας είναι έτοιμη</h2><p>Το αναλυτικό περιεχόμενο θα προστεθεί σταδιακά, χωρίς να αλλάξει η πλοήγηση.</p></section><div id="topic-tools" class="topic-tools"></div></main><footer class="app-footer"><span>Algorithm & Quiz Lab</span><span>Version 1.4</span></footer><script src="content.js"></script><script src="portal.js"></script><script src="lesson.js"></script></body></html>
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ενότητα | Algorithm & Quiz Lab</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-shell">
+
+<header class="app-topbar">
+  <button id="sidebar-toggle" class="mobile-menu-button">☰</button>
+  <a class="app-brand" href="index.html">
+    <span class="brand-symbol">A</span>
+    <span><strong>Algorithm & Quiz Lab</strong><small>Πληροφορική</small></span>
+  </a>
+  <nav class="top-actions">
+    <a href="quiz.html">Quiz</a>
+    <a href="visualizer.html">Visualizers</a>
+    <a href="results.html">Αποτελέσματα</a>
+  </nav>
+</header>
+
+<aside class="app-sidebar">
+  <div class="sidebar-head">
+    <span class="sidebar-label">Εξεταστέα ύλη</span>
+    <input id="syllabus-search" type="search" placeholder="Αναζήτηση ενότητας…">
+  </div>
+  <nav id="syllabus-nav" class="syllabus-nav"></nav>
+</aside>
+
+<main class="app-main lesson-main">
+  <div class="breadcrumb"><a href="index.html">Αρχική</a><span>›</span><span id="breadcrumb-current"></span></div>
+
+  <section class="lesson-hero-new">
+    <span id="topic-code" class="topic-code"></span>
+    <div>
+      <span id="topic-parent" class="section-kicker"></span>
+      <h1 id="topic-title"></h1>
+      <p id="topic-intro"></p>
+      <small id="source-note" class="source-note hidden"></small>
+    </div>
+  </section>
+
+  <section id="topic-children-section" class="subtopics-panel hidden">
+    <div class="panel-heading">
+      <span class="section-kicker">Υποενότητες</span>
+      <h2>Περιεχόμενα</h2>
+    </div>
+    <div id="topic-children" class="subtopics-grid"></div>
+  </section>
+
+  <div id="lesson-tabs" class="study-tabs hidden">
+    <button class="study-tab active" data-study-tab="theory">📘 Μελέτη</button>
+    <button class="study-tab" data-study-tab="example">💡 Παράδειγμα</button>
+    <button class="study-tab" data-study-tab="check">✅ Quick Check</button>
+    <button class="study-tab" data-study-tab="exercises">✏️ Ασκήσεις</button>
+  </div>
+
+  <section id="theory-study-panel" class="study-panel active"></section>
+  <section id="example-study-panel" class="study-panel"></section>
+  <section id="check-study-panel" class="study-panel"></section>
+  <section id="exercises-study-panel" class="study-panel"></section>
+
+  <section id="placeholder-section" class="placeholder-panel hidden">
+    <span class="placeholder-icon">✦</span>
+    <h2>Η δομή της ενότητας είναι έτοιμη</h2>
+    <p>Το αναλυτικό περιεχόμενο θα προστεθεί σταδιακά, χωρίς να αλλάξει η πλοήγηση.</p>
+  </section>
+
+  <div id="topic-tools" class="topic-tools"></div>
+</main>
+
+<footer class="app-footer">
+  <span>Algorithm & Quiz Lab</span>
+  <span>Version 1.5</span>
+</footer>
+
+<script src="content.js"></script>
+<script src="portal.js"></script>
+<script src="lesson.js"></script>
+</body>
+</html>
