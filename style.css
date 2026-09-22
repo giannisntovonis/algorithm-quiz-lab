@@ -393,3 +393,167 @@ body.app-shell{margin:0;min-height:100vh;background:var(--sand);color:var(--ink)
   line-height:1.6;
   font-size:.9rem;
 }
+
+
+/* ======================================================
+   VERSION 1.8 — Vertical accordion sidebar
+   ====================================================== */
+
+.syllabus-nav{
+  padding:6px 10px 28px;
+}
+
+.nav-node{
+  margin:0 0 6px;
+}
+
+.nav-node-row{
+  display:flex;
+  align-items:stretch;
+  gap:6px;
+}
+
+/* Main chapter rows */
+.nav-node.level-0 > .nav-node-row{
+  background:rgba(255,255,255,.075);
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:11px;
+  overflow:hidden;
+}
+
+.nav-node.level-0 > .nav-node-row:hover{
+  background:rgba(255,255,255,.11);
+}
+
+.nav-node.level-0 > .nav-node-row .nav-link{
+  min-height:52px;
+  padding:10px 10px 10px 12px;
+  align-items:center;
+}
+
+.nav-node.level-0 > .nav-node-row .nav-code{
+  min-width:31px;
+  height:31px;
+  padding:0 6px;
+  display:grid;
+  place-items:center;
+  border-radius:8px;
+  background:#d99a2b;
+  color:#17313a;
+  opacity:1;
+  font-size:.72rem;
+}
+
+.nav-node.level-0 > .nav-node-row .nav-title{
+  font-size:.92rem;
+  line-height:1.3;
+  font-weight:800;
+}
+
+/* Children now expand vertically at full width */
+.nav-children{
+  display:none;
+  padding:7px 0 0 0;
+  margin:0;
+}
+
+.nav-children.open{
+  display:block;
+}
+
+/* No horizontal tree indentation */
+.nav-node.level-1,
+.nav-node.level-2,
+.nav-node.level-3{
+  margin-left:0;
+}
+
+/* Subsection rows */
+.nav-node.level-1 > .nav-node-row,
+.nav-node.level-2 > .nav-node-row,
+.nav-node.level-3 > .nav-node-row{
+  border-radius:9px;
+  background:rgba(255,255,255,.035);
+  border-left:3px solid rgba(217,154,43,.55);
+}
+
+.nav-node.level-2 > .nav-node-row{
+  border-left-color:rgba(168,207,202,.6);
+  background:rgba(255,255,255,.025);
+}
+
+.nav-node.level-3 > .nav-node-row{
+  border-left-color:rgba(255,255,255,.22);
+  background:rgba(255,255,255,.018);
+}
+
+.nav-node.level-1 .nav-link,
+.nav-node.level-2 .nav-link,
+.nav-node.level-3 .nav-link{
+  padding:8px 9px;
+  min-height:40px;
+  align-items:center;
+}
+
+.nav-node.level-1 .nav-code,
+.nav-node.level-2 .nav-code,
+.nav-node.level-3 .nav-code{
+  min-width:48px;
+  opacity:.88;
+  font-size:.7rem;
+  color:#bfe0dc;
+}
+
+.nav-node.level-1 .nav-title{
+  font-size:.84rem;
+  font-weight:700;
+}
+
+.nav-node.level-2 .nav-title,
+.nav-node.level-3 .nav-title{
+  font-size:.8rem;
+  font-weight:620;
+  color:#d7e8e5;
+}
+
+/* Toggle always on the right, never consuming left indentation */
+.nav-toggle{
+  width:38px;
+  min-width:38px;
+  height:auto;
+  padding:0;
+  border:0;
+  background:transparent;
+  color:#b7d7d3;
+  display:grid;
+  place-items:center;
+  font-size:1.05rem;
+  transform:rotate(-90deg);
+  transition:transform .18s ease, background .18s ease;
+  cursor:pointer;
+}
+
+.nav-toggle:hover{
+  background:rgba(255,255,255,.07);
+}
+
+.nav-toggle.open{
+  transform:rotate(0deg);
+}
+
+/* Active item */
+.nav-link.active{
+  background:#d99a2b!important;
+  color:#17313a!important;
+  border-radius:8px;
+}
+
+.nav-link.active .nav-code,
+.nav-link.active .nav-title{
+  color:#17313a!important;
+}
+
+/* Improve chapter separation */
+.nav-node.level-0 + .nav-node.level-0{
+  margin-top:8px;
+}
