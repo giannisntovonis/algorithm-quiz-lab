@@ -1,1 +1,70 @@
-<!doctype html><html lang="el"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Algorithm & Quiz Lab</title><link rel="stylesheet" href="style.css"></head><body class="portal-body"><header class="portal-hero"><div class="container portal-hero-inner"><span class="portal-kicker">Algorithm & Quiz Lab</span><h1>Ψηφιακό εκπαιδευτικό βοήθημα Πληροφορικής</h1><p>Οργανωμένη ύλη · Quiz · Διαδραστικοί αλγόριθμοι · Αποτελέσματα</p></div><nav class="portal-tabs"><div class="container portal-tabs-inner"><button data-tab="lessons" class="portal-tab active">📘 Μαθήματα</button><button data-tab="quiz" class="portal-tab">🧠 Quiz</button><button data-tab="visualizers" class="portal-tab">↕ Visualizers</button><button data-tab="results" class="portal-tab">📊 Αποτελέσματα</button></div></nav></header><main class="container portal-main"><section data-panel="lessons" class="portal-panel active"><div class="portal-section-heading"><div><span class="eyebrow">Μαθήματα</span><h2>Οργάνωση κατά ενότητα</h2><p>Επίλεξε ενότητα για θεωρία, quiz, παραδείγματα ή visualizer.</p></div></div><div id="lesson-grid" class="lesson-grid"></div></section><section data-panel="quiz" class="portal-panel"><div class="portal-section-heading"><div><span class="eyebrow">Quiz</span><h2>Ασκήσεις αυτοαξιολόγησης</h2><p>Τα αποτελέσματα αποθηκεύονται στο Netlify Forms με κωδικό μαθητή.</p></div></div><div id="quiz-grid" class="tool-grid"></div></section><section data-panel="visualizers" class="portal-panel"><div class="portal-section-heading"><div><span class="eyebrow">Visualizers</span><h2>Δες τους αλγορίθμους να εκτελούνται</h2><p>Βήμα-βήμα εκτέλεση, Predict Mode, ψευδοκώδικας και Trace Table.</p></div></div><div id="visualizer-grid" class="tool-grid"></div></section><section data-panel="results" class="portal-panel"><div class="portal-section-heading"><div><span class="eyebrow">Αποτελέσματα</span><h2>Αποτελέσματα μαθητών</h2><p>Οι υποβολές αποθηκεύονται στο Netlify Forms.</p></div></div><div class="results-info"><div class="results-icon">📊</div><div><h3>Πού βλέπω τις βαθμολογίες;</h3><p>Netlify → Forms → <strong>quiz-results</strong>. Εκεί εμφανίζονται κωδικός, βαθμολογία, ποσοστό και απαντήσεις.</p><p class="muted">Teacher Dashboard μπορεί να προστεθεί αργότερα μέσα στην εφαρμογή.</p></div></div></section></main><footer class="site-footer"><div class="container footer-inner"><span>Algorithm & Quiz Lab</span><span>Version 1.3</span></div></footer><script src="content.js"></script><script src="home.js"></script></body></html>
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Ψηφιακό εργαστήριο Πληροφορικής με οργανωμένες ενότητες, quiz και visualizers.">
+  <title>Algorithm & Quiz Lab</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+<div class="dashboard-shell">
+  <aside class="side-panel">
+    <div class="side-brand">
+      <div class="side-logo">A</div>
+      <div><strong>Algorithm Lab</strong><small>Πληροφορική Γ΄ Λυκείου</small></div>
+    </div>
+    <nav class="side-nav">
+      <button class="side-link active" data-tab="lessons"><span class="side-icon">▦</span><span>Μαθήματα</span></button>
+      <button class="side-link" data-tab="quiz"><span class="side-icon">?</span><span>Quiz</span></button>
+      <button class="side-link" data-tab="visualizers"><span class="side-icon">↕</span><span>Visualizers</span></button>
+      <button class="side-link" data-tab="results"><span class="side-icon">◒</span><span>Αποτελέσματα</span></button>
+    </nav>
+    <div class="side-info"><span>Version 1.4</span><p>Διαδραστικό εκπαιδευτικό βοήθημα.</p></div>
+  </aside>
+
+  <main class="dashboard-main">
+    <header class="dashboard-topbar">
+      <div><span class="dashboard-kicker">Ψηφιακό εκπαιδευτικό βοήθημα</span><h1 id="page-heading">Μαθήματα</h1></div>
+      <div class="topbar-badge">Γ΄ Λυκείου</div>
+    </header>
+
+    <section class="welcome-card">
+      <div>
+        <span class="welcome-label">Καλώς ήρθες</span>
+        <h2>Μάθε, δοκίμασε, παρατήρησε.</h2>
+        <p>Οργανωμένη θεωρία, παραδείγματα, γρήγοροι έλεγχοι κατανόησης και διαδραστικοί αλγόριθμοι σε ένα περιβάλλον.</p>
+      </div>
+      <div class="welcome-art"><div class="art-card art-one">&lt;/&gt;</div><div class="art-card art-two">01</div><div class="art-card art-three">?</div></div>
+    </section>
+
+    <section data-panel="lessons" class="dashboard-panel active">
+      <div class="section-line">
+        <div><span class="section-eyebrow">Ύλη</span><h2>Ενότητες μαθημάτων</h2><p>Επίλεξε ενότητα για θεωρία, παράδειγμα και Quick Check.</p></div>
+        <div class="section-counter" id="lesson-counter"></div>
+      </div>
+      <div id="lesson-grid" class="modern-lesson-grid"></div>
+    </section>
+
+    <section data-panel="quiz" class="dashboard-panel">
+      <div class="section-line"><div><span class="section-eyebrow">Εξάσκηση</span><h2>Quiz</h2><p>Έλεγχος κατανόησης με άμεση ανατροφοδότηση και αποθήκευση αποτελεσμάτων.</p></div></div>
+      <div id="quiz-grid" class="modern-tool-grid"></div>
+    </section>
+
+    <section data-panel="visualizers" class="dashboard-panel">
+      <div class="section-line"><div><span class="section-eyebrow">Διαδραστικά εργαλεία</span><h2>Algorithm Visualizers</h2><p>Παρακολούθησε την εκτέλεση βήμα-βήμα, μαζί με ψευδοκώδικα και μεταβλητές.</p></div></div>
+      <div id="visualizer-grid" class="modern-tool-grid"></div>
+    </section>
+
+    <section data-panel="results" class="dashboard-panel">
+      <div class="section-line"><div><span class="section-eyebrow">Αξιολόγηση</span><h2>Αποτελέσματα μαθητών</h2><p>Οι απαντήσεις και οι βαθμολογίες του Quiz αποθηκεύονται μέσω Netlify Forms.</p></div></div>
+      <div class="results-dashboard-card"><div class="results-dashboard-icon">◒</div><div><h3>Netlify Forms</h3><p>Για να δεις τις υποβολές, άνοιξε το site στο Netlify και πήγαινε <strong>Forms → quiz-results</strong>.</p><span class="soft-note">Σε επόμενη έκδοση μπορεί να προστεθεί Teacher Dashboard μέσα στην ίδια την εφαρμογή.</span></div></div>
+    </section>
+
+    <footer class="dashboard-footer"><span>Algorithm & Quiz Lab</span><span>Version 1.4</span></footer>
+  </main>
+</div>
+<script src="content.js"></script>
+<script src="home.js"></script>
+</body>
+</html>
