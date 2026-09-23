@@ -632,3 +632,159 @@ body.app-shell{margin:0;min-height:100vh;background:var(--sand);color:var(--ink)
   width:100% !important;
   box-sizing:border-box !important;
 }
+
+
+/* ======================================================
+   VERSION 2.0 — Definitive vertical sidebar structure
+   ====================================================== */
+
+#syllabus-nav.vertical-syllabus{
+  display:flex !important;
+  flex-direction:column !important;
+  flex-wrap:nowrap !important;
+  align-items:stretch !important;
+  gap:8px !important;
+  width:100% !important;
+  box-sizing:border-box !important;
+}
+
+#syllabus-nav.vertical-syllabus > .nav-node{
+  display:block !important;
+  flex:none !important;
+  width:100% !important;
+  min-width:0 !important;
+  max-width:100% !important;
+  margin:0 !important;
+  box-sizing:border-box !important;
+}
+
+#syllabus-nav.vertical-syllabus > .nav-node > .nav-node-row{
+  display:flex !important;
+  flex-direction:row !important;
+  width:100% !important;
+  box-sizing:border-box !important;
+}
+
+#syllabus-nav.vertical-syllabus .nav-link{
+  flex:1 1 0 !important;
+  min-width:0 !important;
+}
+
+#syllabus-nav.vertical-syllabus .nav-children{
+  display:none !important;
+  position:static !important;
+  width:100% !important;
+  padding:7px 0 0 0 !important;
+  margin:0 !important;
+  box-sizing:border-box !important;
+}
+
+#syllabus-nav.vertical-syllabus .nav-children.open{
+  display:flex !important;
+  flex-direction:column !important;
+  flex-wrap:nowrap !important;
+  align-items:stretch !important;
+  gap:5px !important;
+}
+
+#syllabus-nav.vertical-syllabus .nav-children > .nav-node{
+  display:block !important;
+  flex:none !important;
+  width:100% !important;
+  max-width:100% !important;
+  margin:0 !important;
+  box-sizing:border-box !important;
+}
+
+#syllabus-nav.vertical-syllabus .nav-children .nav-node-row{
+  display:flex !important;
+  width:100% !important;
+  box-sizing:border-box !important;
+}
+
+/* Main chapters visually separated */
+#syllabus-nav.vertical-syllabus > .nav-node > .nav-node-row{
+  min-height:54px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.11);
+  border-radius:11px;
+}
+
+#syllabus-nav.vertical-syllabus > .nav-node > .nav-node-row .nav-link{
+  padding:10px 8px 10px 12px;
+  align-items:center;
+}
+
+#syllabus-nav.vertical-syllabus > .nav-node > .nav-node-row .nav-code{
+  display:grid;
+  place-items:center;
+  flex:0 0 34px;
+  width:34px;
+  min-width:34px;
+  height:34px;
+  border-radius:9px;
+  background:#d99a2b;
+  color:#17313a;
+  opacity:1;
+  padding:0;
+}
+
+#syllabus-nav.vertical-syllabus > .nav-node > .nav-node-row .nav-title{
+  font-size:.91rem;
+  font-weight:800;
+}
+
+/* Subsections are also one under another */
+#syllabus-nav.vertical-syllabus .nav-children .nav-node-row{
+  min-height:40px;
+  border-left:3px solid rgba(217,154,43,.56);
+  background:rgba(255,255,255,.03);
+  border-radius:8px;
+}
+
+#syllabus-nav.vertical-syllabus .nav-children .nav-link{
+  padding:7px 8px;
+  align-items:center;
+}
+
+#syllabus-nav.vertical-syllabus .nav-children .nav-code{
+  flex:0 0 58px;
+  min-width:58px;
+  font-size:.69rem;
+  color:#bfe0dc;
+}
+
+#syllabus-nav.vertical-syllabus .nav-children .nav-title{
+  font-size:.82rem;
+  line-height:1.28;
+}
+
+#syllabus-nav.vertical-syllabus .nav-toggle{
+  flex:0 0 40px;
+  width:40px;
+  min-width:40px;
+  border:0;
+  background:transparent;
+  color:#c9e0dd;
+  cursor:pointer;
+  transform:rotate(-90deg);
+}
+
+#syllabus-nav.vertical-syllabus .nav-toggle.open{
+  transform:rotate(0deg);
+}
+
+/* Main-page chapter list is vertical too */
+.chapter-overview{
+  display:flex !important;
+  flex-direction:column !important;
+  flex-wrap:nowrap !important;
+  align-items:stretch !important;
+  gap:9px !important;
+}
+
+.chapter-overview > .chapter-pill{
+  display:flex !important;
+  width:100% !important;
+  box-sizing:border-box !important;
+}
