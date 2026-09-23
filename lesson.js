@@ -245,7 +245,6 @@ if(!topic){
   }
 
   const tools=[];
-  if(topic.code==="3.6") tools.push('<a class="tool-button" href="visualizer.html?algorithm=binary">Binary Search Visualizer</a>');
   if(topic.code==="3.7") tools.push('<a class="tool-button" href="visualizer.html?algorithm=bubble">Bubble Sort Visualizer</a>');
   if(topic.code==="2"||topic.code.startsWith("2.")) tools.push('<a class="tool-button secondary" href="quiz.html">Quiz αλγορίθμων</a>');
   document.querySelector("#topic-tools").innerHTML=tools.join("");
