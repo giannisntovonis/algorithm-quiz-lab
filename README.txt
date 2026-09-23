@@ -19,3 +19,17 @@ VERSION 2.2 — CACHE FIX
 - και αντίστοιχα στα quiz/visualizer scripts.
 
 Έτσι ο browser/Netlify δεν θα επαναχρησιμοποιεί παλιό content.js από προηγούμενο deploy.
+
+
+VERSION 2.3 — HARD CACHE / DEPLOY FIX
+- Τα βασικά αρχεία πήραν ΝΕΑ μοναδικά ονόματα:
+  style-v23.css
+  content-v23.js
+  portal-v23.js
+  lesson-v23.js
+  home-v23.js
+- Έτσι ούτε browser ούτε Netlify μπορούν να χρησιμοποιήσουν παλιό αρχείο με ίδιο όνομα.
+- Το Chapter 3 ελέγχθηκε πριν τη δημιουργία του ZIP:
+  3, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7 υπάρχουν.
+- Στην αρχική και στο footer εμφανίζεται:
+  Version 2.3 · Chapter 3 loaded
